@@ -1,10 +1,11 @@
 $primary-color: #121212;
-$secondary-color: #404040;
+$secondary-color: #6a6a6a;
 $show-home-image: true;
 $home-image: url(../img/techcover.jpg);
 $background-opacity: 0.9;
 $font-secondary: 'Lora',
-serif;
+serif'Montserrat',
+sans-serif;
 @mixin easeOut {
     transition: all .5s ease-out;
 }
@@ -17,7 +18,7 @@ serif;
             background-size: cover;
             &:after {
                 content: '';
-                position: absolute;
+                position: fixed;
                 top: 0;
                 right: 0;
                 width: 100%;
