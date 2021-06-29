@@ -54,6 +54,7 @@
         height: 100vh;
         overflow: hidden;
     }
+    // Navigation Side
     &-nav {
         margin: 0;
         padding: 0;
@@ -92,10 +93,26 @@
             // Slide in from right
             transform: translate3d(0, 0, 0);
         }
+        &.current>a {
+            color: $secondary-color;
+        }
+    }
+    .nav-link {
+        display: inline-block;
+        position: relative;
+        font-size: 1.9rem;
+        text-transform: uppercase;
+        padding: 1rem 0;
+        color: #f8f9fa;
+        text-decoration: none;
+        @include easeOut;
+        &:hover {
+            color: $secondary-color;
+        }
     }
 }
 
-// Delay each nav item slide by 0.1s
+// Delay each nav-item slide by 0.1s
 @for $x from 1 through 4 {
     .nav-item:nth-child(#{$x}) {
         transition-delay: $x * 0.1s;
