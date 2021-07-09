@@ -12,6 +12,7 @@
         .lg-heading {
             line-height: 1;
             margin-bottom: 1rem;
+            margin-top: 10vh;
         }
     }
     ul.menu-dav,
@@ -38,6 +39,10 @@
             width: 9.4rem;
             height: 9.4rem;
         }
+    }
+    .about-info {
+        grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+        grid-template-columns: 1fr;
     }
 }
 
