@@ -69,7 +69,6 @@ main {
     }
 }
 
-
 /** ABOUT PAGE **/
 
 .about-info {
@@ -90,6 +89,9 @@ main {
     .job-1 {
         grid-area: job1;
     }
+    .job h6 {
+        font-size: 1rem;
+    }
     .job-2 {
         grid-area: job2;
     }
@@ -98,11 +100,10 @@ main {
     }
     .job {
         background: lighten($primary-color, 5);
-        padding: .5rem;
+        padding: 0.5rem;
         border-bottom: $secondary-color 5px solid;
     }
 }
-
 
 /** WORK/PROJECT PAGE **/
 
@@ -112,15 +113,14 @@ main {
     grid-gap: 1rem;
     img {
         width: 100%;
-        border: 3px #A3A3A3 solid;
+        border: 3px #a3a3a3 solid;
         @include easeOut;
         &:hover {
-            opacity: .5;
+            opacity: 0.5;
             border-color: $secondary-color;
         }
     }
 }
-
 
 /** CONTACT PAGE **/
 
@@ -137,7 +137,7 @@ main {
         margin-bottom: 3rem;
         @include easeOut;
         &:hover {
-            padding: .5rem 1.5rem;
+            padding: 0.5rem 1.5rem;
             background: $secondary-color;
             color: set-text-color($secondary-color);
             span {
@@ -150,9 +150,9 @@ main {
 //* Button Styles
 .btn {
     display: block;
-    padding: .5rem 1rem;
+    padding: 0.5rem 1rem;
     border: 0;
-    margin-bottom: .3rem;
+    margin-bottom: 0.3rem;
     text-align: center;
     @include easeOut;
     &:hover {
@@ -177,7 +177,6 @@ main {
         background: lighten($secondary-color, 50);
     }
 }
-
 
 /** FOOTER **/
 

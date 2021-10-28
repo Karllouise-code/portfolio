@@ -177,13 +177,15 @@ main {
     font-size: 1.5rem; }
   .about-info .job-1 {
     grid-area: job1; }
+  .about-info .job h6 {
+    font-size: 1rem; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
     background: #1f1f1f;
-    padding: .5rem;
+    padding: 0.5rem;
     border-bottom: #6a6a6a 5px solid; }
 
 /** WORK/PROJECT PAGE **/
@@ -193,10 +195,10 @@ main {
   grid-gap: 1rem; }
   .projects img {
     width: 100%;
-    border: 3px #A3A3A3 solid;
+    border: 3px #a3a3a3 solid;
     transition: all .5s ease-out; }
     .projects img:hover {
-      opacity: .5;
+      opacity: 0.5;
       border-color: #6a6a6a; }
 
 /** CONTACT PAGE **/
@@ -213,7 +215,7 @@ main {
     margin-bottom: 3rem;
     transition: all .5s ease-out; }
     .boxes div:hover {
-      padding: .5rem 1.5rem;
+      padding: 0.5rem 1.5rem;
       background: #6a6a6a;
       color: #000; }
       .boxes div:hover span {
@@ -221,9 +223,9 @@ main {
 
 .btn, .btn-light, .btn-dark {
   display: block;
-  padding: .5rem 1rem;
+  padding: 0.5rem 1rem;
   border: 0;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   text-align: center;
   transition: all .5s ease-out; }
   .btn:hover, .btn-light:hover, .btn-dark:hover {
