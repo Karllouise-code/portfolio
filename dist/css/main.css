@@ -4,13 +4,13 @@
   right: 35px;
   top: 35px;
   cursor: pointer;
-  transition: all .5s ease-out; }
+  transition: all 0.5s ease-out; }
   .menu-btn .btn-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
     background: #fff;
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
   .menu-btn.close {
     transform: rotate(180deg); }
     .menu-btn.close .btn-line:nth-child(1) {
@@ -43,14 +43,14 @@
     background: rgba(5, 5, 5, 0.9);
     list-style: none;
     transform: translate3d(0, -100%, 0);
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
     background: #121212;
     background: rgba(18, 18, 18, 0.9);
     transform: translate3d(0, 100%, 0);
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu-branding.show {
       transform: translate3d(0, 0, 0); }
     .menu-branding .portrait {
@@ -62,7 +62,7 @@
       background-size: cover; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
     .menu .nav-item.current > a {
@@ -75,7 +75,7 @@
     padding: 1rem 0;
     color: #fff;
     text-decoration: none;
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
     .menu .nav-link:hover {
       color: #6a6a6a; }
 
@@ -99,14 +99,14 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/techcover.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: fixed;
       top: 0;
       right: 0;
@@ -114,6 +114,12 @@ body {
       height: 100%;
       z-index: -1;
       background: rgba(18, 18, 18, 0.9); }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center; }
 
 h1,
 h2,
@@ -132,6 +138,10 @@ h3 {
     padding: 0.2rem 1rem;
     background: #151515;
     font-family: "Lora", serif "Montserrat", sans-serif; }
+  h1.align-end,
+  h2.align-end,
+  h3.align-end {
+    text-align: end; }
 
 a {
   color: #fff;
@@ -153,7 +163,7 @@ main {
     margin-top: 2rem; }
     main .icons a {
       padding: 0.5rem;
-      transition: all .5s ease-out; }
+      transition: all 0.5s ease-out; }
       main .icons a:hover {
         color: #6a6a6a; }
   main#home {
@@ -161,12 +171,44 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
+section {
+  padding: 4rem; }
+  section#divider {
+    overflow: hidden; }
+    section#divider h1 {
+      margin-top: 20vh; }
+  section .card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: #151515;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+    text-align: center;
+    transition: 0.3s ease-in-out; }
+  section .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    scale: 1.1; }
+  section .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+    margin: auto;
+    padding: 0 0.9rem; }
+  section .card-body {
+    padding: 1rem; }
+  section .card-title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: auto; }
+  section .card-img {
+    min-width: 5rem;
+    max-width: 5rem; }
+
 /** ABOUT PAGE **/
 .about-info {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3'; }
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3"; }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -178,14 +220,18 @@ main {
   .about-info .job-1 {
     grid-area: job1; }
   .about-info .job h6 {
-    font-size: 1rem; }
+    font-size: 1rem;
+    margin: 1rem 0 1.2rem;
+    text-align: center; }
+  .about-info .job p {
+    text-align: justify; }
   .about-info .job-2 {
     grid-area: job2; }
   .about-info .job-3 {
     grid-area: job3; }
   .about-info .job {
     background: #1f1f1f;
-    padding: 0.5rem;
+    padding: 0 2rem;
     border-bottom: #6a6a6a 5px solid; }
 
 /** WORK/PROJECT PAGE **/
@@ -196,7 +242,7 @@ main {
   .projects img {
     width: 100%;
     border: 3px #a3a3a3 solid;
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
     .projects img:hover {
       opacity: 0.5;
       border-color: #6a6a6a; }
@@ -213,7 +259,7 @@ main {
     border: 3px #fff solid;
     padding: 1.5rem 2.5rem;
     margin-bottom: 3rem;
-    transition: all .5s ease-out; }
+    transition: all 0.5s ease-out; }
     .boxes div:hover {
       padding: 0.5rem 1.5rem;
       background: #6a6a6a;
@@ -227,7 +273,7 @@ main {
   border: 0;
   margin-bottom: 0.3rem;
   text-align: center;
-  transition: all .5s ease-out; }
+  transition: all 0.5s ease-out; }
   .btn:hover, .btn-light:hover, .btn-dark:hover {
     color: #000; }
 
@@ -256,17 +302,26 @@ main {
     grid-template-columns: repeat(5, 1fr); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  section .col {
+    flex: 0 0 33.33%;
+    max-width: 33.33%; }
   .projects {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
-  main {
+  main,
+  section {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
+    main .lg-heading,
+    section .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
       margin-top: 10vh; }
+    main .col,
+    section .col {
+      flex: 0 0 50%;
+      max-width: 50%; }
   ul.menu-dav,
   div.menu-branding {
     float: none;
@@ -289,18 +344,28 @@ main {
       width: 9.4rem;
       height: 9.4rem; }
   .about-info {
-    grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main {
+  main,
+  section {
     padding: 2rem; }
-    main #home h1 {
+    main #home h1,
+    section #home h1 {
       margin-top: 10vh; }
-    main .lg-heading {
+    main .lg-heading,
+    section .lg-heading {
       margin-top: 1rem;
       font-size: 5rem; }
+    main .col,
+    section .col {
+      flex: 1 1 100%;
+      max-width: 100%; }
+  section .lg-heading {
+    font-size: 3.5rem;
+    text-align: center; }
   .projects {
     grid-template-columns: 1fr; } }
