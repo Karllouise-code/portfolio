@@ -123,7 +123,7 @@ body {
 
 .container {
   width: 100%;
-  max-width: 60rem;
+  max-width: 70rem;
   margin: 0 auto; }
 
 h1,
@@ -190,20 +190,40 @@ section {
   section .card {
     border-radius: 0.5rem;
     background-color: #151515;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
     text-align: center;
-    transition: 0.3s ease-in-out; }
-  section .card:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    scale: 1.1; }
+    transition: 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    padding: 0.9rem; }
   section .col {
     flex: 0 0 25%;
     max-width: 25%;
     margin: auto;
-    padding: 0 0.9rem; }
-  section .card-body {
-    padding: 0.3rem; }
+    padding: 0 1rem; }
+  section .card-layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    transition: 0.5s ease-in-out; }
+  section .card-layer:hover {
+    background: rgba(13, 27, 43, 0.5); }
+  section .card-layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    bottom: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s; }
+  section .card-layer:hover h3 {
+    bottom: 29%;
+    opacity: 1; }
   section .card-title {
     font-size: 1rem;
     font-weight: 300;
