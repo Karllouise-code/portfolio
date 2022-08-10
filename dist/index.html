@@ -16,49 +16,17 @@
   <div id="app">
     <body id="bg-img">
       <header>
-        <div class="menu-btn">
-          <div class="btn-line"></div>
-          <div class="btn-line"></div>
-          <div class="btn-line"></div>
-        </div>
-
-        <nav class="menu">
-          <div class="menu-branding">
-            <div class="portrait"></div>
-          </div>
-
-          <ul class="menu-nav">
-            <li class="nav-item current"><a href="#" class="nav-link">Home</a></li>
-            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-            <li class="nav-item"><a href="work.html" class="nav-link">Projects</a></li>
-            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-          </ul>
-        </nav>
+        <app-menu-toggle />
       </header>
 
       <main id="home">
         <h1 class="lg-heading">Karl Louise <span class="text-secondary">Rito</span></h1>
-
         <h2 class="sm-heading">Web Developer, Programmer, Designer & Entrepreneur</h2>
-
         <div class="icons">
-          <a href="https://www.facebook.com/karllouise08/" target="_blank">
-            <i class="fab fa-facebook fa-2x"></i>
-          </a>
-          <a href="https://twitter.com/karl_rito" target="_blank">
-            <i class="fab fa-twitter fa-2x"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/karllouise08/" target="_blank">
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
-          <a href="https://github.com/Karllouise-code/" target="_blank">
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-          <a href="https://www.instagram.com/kalowies_/" target="_blank">
-            <i class="fab fa-instagram fa-2x"></i>
-          </a>
+          <home-icons />
         </div>
       </main>
+
       <section id="divider">
         <h1 class="lg-heading expertise-lg-heading">Exper<span class="text-secondary">tise</span></h1>
         <div class="container">
@@ -69,18 +37,34 @@
         </div>
       </section>
 
+      <!-- section featured projects -->
+      <section id="featured-projects">
+        <h1 class="lg-heading">Featured <span class="text-secondary">Projects</span></h1>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="featured-projects-container">
+                <home-featured-projects />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <footer id="main-footer">Copyright &copy; 2021</footer>
     </body>
   </div>
 </html>
 <script type="module">
   import HomeExpertise from './js/components/HomeExpertise.js';
+  import AppMenuToggle from './js/components/AppMenuToggle.js';
+  import HomeIcons from './js/components/HomeIcons.js';
   let app = {
     components: {
       'home-expertise': HomeExpertise,
+      'home-icons': HomeIcons,
+      'app-menu-toggle': AppMenuToggle,
     },
   };
   Vue.createApp(app).mount('#app');
 </script>
-<!-- script src ./js/main.js -->
-<script src="./js/main.js"></script>

@@ -38,7 +38,7 @@ h3 {
   &.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: rgba(lighten($primary-color, 1), 1);
+    background: rgba(darken($primary-color, 10), $background-opacity - 0.4);
     font-family: $font-secondary;
   }
   &.expertise-lg-heading {
@@ -96,7 +96,7 @@ section {
   }
   .card {
     border-radius: 0.5rem;
-    background-color: rgba(lighten($primary-color, 1), 1);
+    background-color: $tertiary-color;
     margin-bottom: 2rem;
     text-align: center;
     transition: 0.3s ease-in-out;
@@ -121,13 +121,13 @@ section {
     transition: 0.5s ease-in-out;
   }
   .card-layer:hover {
-    background: hsla(213, 53%, 11%, 0.5);
+    background: rgba(lighten($primary-color, 1), $background-opacity - 0.1);
   }
   .card-layer h3 {
     width: 100%;
     font-weight: 500;
-    color: white;
-    bottom: 40%;
+    color: #fff;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
@@ -136,7 +136,7 @@ section {
   }
 
   .card-layer:hover h3 {
-    bottom: 29%;
+    bottom: 38%;
     opacity: 1;
   }
 
