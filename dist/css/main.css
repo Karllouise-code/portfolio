@@ -58,7 +58,7 @@
       height: 15rem;
       background: url("../img/1x1.png");
       border-radius: 50%;
-      border: solid 3px #6a6a6a;
+      border: solid 5px #6a6a6a;
       background-size: cover; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
@@ -141,7 +141,7 @@ h3 {
   h3.sm-heading {
     margin-bottom: 2rem;
     padding: 0.2rem 1rem;
-    background: #151515;
+    background: rgba(0, 0, 0, 0.5);
     font-family: "Lora", serif "Montserrat", sans-serif; }
   h1.expertise-lg-heading,
   h2.expertise-lg-heading,
@@ -189,7 +189,7 @@ section {
       margin-top: 20vh; }
   section .card {
     border-radius: 0.5rem;
-    background-color: #151515;
+    background-color: #0d1b6480;
     margin-bottom: 2rem;
     text-align: center;
     transition: 0.3s ease-in-out;
@@ -210,19 +210,19 @@ section {
     left: 0;
     transition: 0.5s ease-in-out; }
   section .card-layer:hover {
-    background: rgba(13, 27, 43, 0.5); }
+    background: rgba(21, 21, 21, 0.8); }
   section .card-layer h3 {
     width: 100%;
     font-weight: 500;
-    color: white;
-    bottom: 40%;
+    color: #fff;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
     opacity: 0;
     transition: 0.5s; }
   section .card-layer:hover h3 {
-    bottom: 29%;
+    bottom: 38%;
     opacity: 1; }
   section .card-title {
     font-size: 1rem;
