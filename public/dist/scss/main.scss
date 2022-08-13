@@ -1,16 +1,15 @@
-@import 'config';
-@import 'menu';
+@import "config";
+@import "menu";
 * {
   box-sizing: border-box;
 }
-
 body {
   @include background;
   background: $primary-color;
   color: set-text-color($primary-color);
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
 }
 .row {
@@ -157,7 +156,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3';
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3";
   .bio-image {
     grid-area: bioimage;
     margin: auto;
@@ -275,4 +274,4 @@ section {
   height: 60px;
 }
 
-@import 'mobile';
+@import "mobile";

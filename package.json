@@ -1,18 +1,21 @@
 {
-    "name": "modern_portfolio",
-    "version": "1.0.0",
-    "description": "Responsive portfolio website",
-    "main": "index.js",
-    "homepage": "https://Karllouise-code.github.io/portfolio",
-    "scripts": {
-        "sass": "node-sass -w scss/ -o dist/css/ --recursive",
-        "deploy": "gh-pages -d dist"
-    },
-    "author": "Karl Louise Rito",
-    "license": "ISC",
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^5.15.3",
-        "gh-pages": "^3.2.3",
-        "node-sass": "^6.0.0"
-    }
+  "name": "portfolio2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "sass": "node-sass -w public/dist/scss/ -o public/dist/css --recursive"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13",
+    "vue-router": "^4.0.3"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-plugin-router": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "node-sass": "^7.0.1"
+  }
 }

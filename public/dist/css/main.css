@@ -99,14 +99,14 @@ body {
   color: #fff;
   height: 100%;
   margin: 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url(../img/techcover.jpg);
     background-attachment: fixed;
     background-size: cover; }
     body#bg-img:after {
-      content: '';
+      content: "";
       position: fixed;
       top: 0;
       right: 0;
@@ -237,7 +237,7 @@ section {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  grid-template-areas: 'bioimage bio bio' 'job1 job2 job3'; }
+  grid-template-areas: "bioimage bio bio" "job1 job2 job3"; }
   .about-info .bio-image {
     grid-area: bioimage;
     margin: auto;
