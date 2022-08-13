@@ -192,10 +192,8 @@ main {
       transition: all 0.5s ease-out; }
       main .icons a:hover {
         color: #6a6a6a; }
-  main#home {
-    overflow: hidden; }
-    main#home h1 {
-      margin-top: 20vh; }
+  main h1.lg-heading {
+    margin-top: 20vh; }
 
 section {
   padding: 4rem; }
@@ -298,7 +296,8 @@ section {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  width: 100%; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
@@ -354,15 +353,19 @@ section {
     grid-template-columns: repeat(3, 1fr); } }
 
 @media screen and (max-width: 768px) {
+  main {
+    min-height: auto; }
+    main h1.lg-heading {
+      margin-top: 10vh; }
   main,
   section {
     align-items: center;
-    text-align: center; }
+    text-align: left; }
     main .lg-heading,
     section .lg-heading {
       line-height: 1;
       margin-bottom: 1rem;
-      margin-top: 10vh; }
+      font-size: 4rem; }
     main .col,
     section .col {
       flex: 0 0 50%;
@@ -392,7 +395,12 @@ section {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
-    grid-template-columns: repeat(2, 1fr); } }
+    grid-template-columns: repeat(2, 1fr); }
+  #contact {
+    min-height: calc(100vh - 60px); }
+  .boxes div {
+    font-size: 1rem;
+    width: 100%; } }
 
 @media screen and (max-width: 500px) {
   main,
@@ -403,14 +411,13 @@ section {
       margin-top: 10vh; }
     main .lg-heading,
     section .lg-heading {
-      margin-top: 1rem;
-      font-size: 5rem; }
+      font-size: 3rem; }
+    main .sm-heading,
+    section .sm-heading {
+      font-size: 1.2rem; }
     main .col,
     section .col {
       flex: 1 1 100%;
       max-width: 100%; }
-  section .lg-heading {
-    font-size: 3.5rem;
-    text-align: center; }
   .projects {
     grid-template-columns: 1fr; } }
