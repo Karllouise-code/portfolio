@@ -1,17 +1,17 @@
 <template>
   <header>
-    <div class="menu-btn" @click="toggleMenu()">
+    <div class="menu-btn" :class="{ close: showMenu, open: !showMenu }" @click="toggleMenu()">
       <div class="btn-line"></div>
       <div class="btn-line"></div>
       <div class="btn-line"></div>
     </div>
 
-    <nav class="menu">
-      <div class="menu-branding">
+    <nav class="menu" :class="{ show: showMenu, close: !showMenu }">
+      <div class="menu-branding" :class="{ show: showMenu, close: !showMenu }">
         <div class="portrait"></div>
       </div>
 
-      <ul class="menu-nav">
+      <ul class="menu-nav" :class="{ show: showMenu, close: !showMenu }">
         <li class="nav-item current">
           <router-link to="/" class="nav-link">Home</router-link>
         </li>
@@ -41,24 +41,10 @@ export default {
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu;
-
-      const menuBtn = document.querySelector(".menu-btn");
-      const menu = document.querySelector(".menu");
-      const menuNav = document.querySelector(".menu-nav");
-      const menuBranding = document.querySelector(".menu-branding");
       const navItems = document.querySelectorAll(".nav-item");
-
       if (this.showMenu) {
-        menuBtn.classList.add("close");
-        menu.classList.add("show");
-        menuNav.classList.add("show");
-        menuBranding.classList.add("show");
         navItems.forEach((item) => item.classList.add("show"));
       } else {
-        menuBtn.classList.remove("close");
-        menu.classList.remove("show");
-        menuNav.classList.remove("show");
-        menuBranding.classList.remove("show");
         navItems.forEach((item) => item.classList.remove("show"));
       }
     },
