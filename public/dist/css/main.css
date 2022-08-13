@@ -192,8 +192,10 @@ main {
       transition: all 0.5s ease-out; }
       main .icons a:hover {
         color: #6a6a6a; }
-  main h1.lg-heading {
-    margin-top: 20vh; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 20vh; }
 
 section {
   padding: 4rem; }
