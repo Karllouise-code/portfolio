@@ -1,4 +1,8 @@
 // Menu Button
+.current {
+  color: $secondary-color;
+  font-weight: bold;
+}
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -93,9 +97,6 @@
       // Slide in from right
       transform: translate3d(0, 0, 0);
     }
-    &.current > a {
-      color: $secondary-color;
-    }
   }
   .nav-link {
     display: inline-block;
@@ -103,7 +104,7 @@
     font-size: 1.9rem;
     text-transform: uppercase;
     padding: 1rem 0;
-    color: set-text-color($primary-color);
+    // color: set-text-color($primary-color);
     text-decoration: none;
     @include easeOut;
     &:hover {

@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <div v-if="is_loading" class="loader"></div>
+  <div v-else>
     <main id="home">
       <h1 class="lg-heading">Karl Louise <span class="text-secondary">Rito</span></h1>
       <h2 class="sm-heading">Web Developer, Programmer, Designer & Entrepreneur</h2>
@@ -36,8 +37,20 @@
 <script>
 let logo_path = "../../../dist/img/logo";
 export default {
+  created() {
+    this.loadContent();
+  },
+  methods: {
+    loadContent() {
+      this.is_loading = true;
+      setTimeout(() => {
+        this.is_loading = false;
+      }, 1000);
+    },
+  },
   data() {
     return {
+      is_loading: true,
       icons: [
         {
           id: 1,
