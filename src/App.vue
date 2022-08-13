@@ -41,15 +41,14 @@ export default {
 
   methods: {
     closeWindow() {
+      const navItems = document.querySelectorAll(".nav-item");
+
       this.showMenu = false;
+      navItems.forEach((item) => item.classList.remove("show"));
     },
     toggleMenu() {
       this.showMenu = !this.showMenu;
 
-      const menuBtn = document.querySelector(".menu-btn");
-      const menu = document.querySelector(".menu");
-      const menuNav = document.querySelector(".menu-nav");
-      const menuBranding = document.querySelector(".menu-branding");
       const navItems = document.querySelectorAll(".nav-item");
 
       if (this.showMenu) {

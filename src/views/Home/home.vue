@@ -1,37 +1,35 @@
 <template>
-  <div v-if="is_loading" class="loader"></div>
-  <div v-else>
-    <main id="home">
-      <h1 class="lg-heading">Karl Louise <span class="text-secondary">Rito</span></h1>
-      <h2 class="sm-heading">Web Developer, Programmer, Designer & Entrepreneur</h2>
-      <div class="icons">
-        <a v-for="icon in icons" :key="icon.id" :href="icon.target_url" target="_blank">
-          <i :class="icon.code"></i>
-        </a>
-      </div>
-    </main>
+  <main id="home">
+    <h1 class="lg-heading">Karl Louise <span class="text-secondary">Rito</span></h1>
+    <h2 class="sm-heading">Web Developer, Programmer, Designer & Entrepreneur</h2>
+    <div class="icons">
+      <a v-for="icon in icons" :key="icon.id" :href="icon.target_url" target="_blank">
+        <i :class="icon.code"></i>
+      </a>
+    </div>
+  </main>
 
-    <section id="divider">
-      <h1 class="lg-heading expertise-lg-heading">Exper<span class="text-secondary">tise</span></h1>
-      <div class="container">
-        <div style="padding: 0 1rem">
-          <h2 class="sm-heading expertise-sm-heading">My Artillery</h2>
-        </div>
-        <div class="row">
-          <div class="col" v-for="a in expertise" :key="a.id">
-            <a :href="a.href_url" target="_blank">
-              <div class="card">
-                <img :src="a.img_source" :alt="a.name" class="card-img" />
-                <div class="card-layer">
-                  <h3>{{ a.name }}</h3>
-                </div>
+  <section id="divider">
+    <h1 class="lg-heading expertise-lg-heading">Exper<span class="text-secondary">tise</span></h1>
+    <div class="container">
+      <div style="padding: 0 1rem">
+        <h2 class="sm-heading expertise-sm-heading">My Artillery</h2>
+      </div>
+      <div class="row">
+        <div class="col" v-for="a in expertise" :key="a.id">
+          <a :href="a.href_url" target="_blank">
+            <div class="card">
+              <img :src="a.img_source" :alt="a.name" class="card-img" />
+              <div class="card-layer">
+                <h3>{{ a.name }}</h3>
               </div>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
+  <div v-if="is_loading" class="loader"></div>
 </template>
 
 <script>
