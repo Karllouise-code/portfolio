@@ -13,6 +13,7 @@ $container-width: 70rem;
 @mixin background {
   @if $show-home-image {
     &#bg-img {
+      position: relative;
       background: $home-image;
       background-attachment: fixed;
       background-size: cover;
