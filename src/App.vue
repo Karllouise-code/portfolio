@@ -16,13 +16,13 @@
           <router-link @click="closeWindow()" to="/" class="nav-link" exact>Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link @click="closeWindow()" to="/about" class="nav-link">About</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'about' }" class="nav-link">About</router-link>
         </li>
         <li class="nav-item">
-          <router-link @click="closeWindow()" to="/projects" class="nav-link">Projects</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'projects' }" class="nav-link">Projects</router-link>
         </li>
         <li class="nav-item">
-          <router-link @click="closeWindow()" to="/contacts" class="nav-link">Contacts</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'contact' }" class="nav-link">Contacts</router-link>
         </li>
       </ul>
     </nav>
