@@ -19,15 +19,13 @@
         <h2 class="sm-heading expertise-sm-heading">My Artillery</h2>
       </div>
       <div class="row">
-        <div class="col" v-for="a in expertise" :key="a.id">
-          <a :href="a.href_url" target="_blank">
-            <div class="card">
-              <img :src="a.img_source" :alt="a.name" class="card-img" />
-              <div class="card-layer">
-                <h3>{{ a.name }}</h3>
-              </div>
+        <div class="col" v-for="a in expertise" :key="a.name">
+          <div class="card">
+            <img :src="a.img_source" :alt="a.name" class="card-img" />
+            <div class="card-layer">
+              <h3>{{ a.name }}</h3>
             </div>
-          </a>
+          </div>
         </div>
       </div>
     </div>
@@ -105,82 +103,66 @@ export default {
         {
           name: "Laravel",
           img_source: logo_path + "/laravel.png",
-          href_url: "https://laravel.com",
         },
         {
           name: "Vuejs",
           img_source: logo_path + "/vuejs-icon.svg",
-          href_url: "https://vuejs.org",
         },
         {
           name: "GraphQL",
           img_source: logo_path + "/graphql.png",
-          href_url: "https://github.com/rebing/graphql-laravel",
         },
         {
           name: "VS Code",
           img_source: logo_path + "/vscode.svg",
-          href_url: "https://code.visualstudio.com",
         },
         {
           name: "Postman",
           img_source: logo_path + "/postman.svg",
-          href_url: "https://www.postman.com",
         },
         {
           name: "MySQL",
           img_source: logo_path + "/mysql-icon.svg",
-          href_url: "https://www.mysql.com",
         },
         {
           name: "NodeJS",
           img_source: logo_path + "/nodejs-icon.svg",
-          href_url: "https://nodejs.org",
         },
         {
           name: "Git",
           img_source: logo_path + "/git-scm-icon.svg",
-          href_url: "https://git-scm.com",
         },
         {
           name: "Bootstrap",
           img_source: logo_path + "/getbootstrap-icon.svg",
-          href_url: "https://getbootstrap.com",
         },
         {
           name: "Sass",
           img_source: logo_path + "/sass-lang-icon.svg",
-          href_url: "https://sass-lang.com",
         },
         {
           name: "jQuery",
           img_source: logo_path + "/jquery-icon.svg",
-          href_url: "https://jquery.com",
         },
         {
           name: "JavaScript",
           img_source: logo_path + "/javascript-icon.svg",
-          href_url: "https://www.javascript.com",
         },
         {
           name: "PHP",
           img_source: logo_path + "/php-icon.svg",
-          href_url: "https://www.php.net",
         },
         {
           name: "HTML",
           img_source: logo_path + "/w3_html5-icon.svg",
-          href_url: "https://www.w3schools.com",
         },
         {
           name: "CSS",
           img_source: logo_path + "/w3_css-icon.svg",
-          href_url: "https://www.w3schools.com",
         },
         {
           name: "Canva",
           img_source: logo_path + "/canva-icon.svg",
-          href_url: "https://www.canva.com",
         },
       ],
     };
