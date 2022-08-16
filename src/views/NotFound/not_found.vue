@@ -9,7 +9,7 @@
       </div>
       <!-- router-link to home -->
       <div class="icons" style="text-align: center">
-        <router-link to="/" style="text-align: center">
+        <router-link :to="{ name: 'Home' }" style="text-align: center">
           <i class="fas fa-home fa-2x"></i>
         </router-link>
       </div>

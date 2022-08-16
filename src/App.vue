@@ -13,16 +13,16 @@
 
       <ul class="menu-nav" :class="{ show: showMenu, close: !showMenu }">
         <li class="nav-item">
-          <router-link @click="closeWindow()" to="/" class="nav-link" exact>Home</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'Home' }" class="nav-link" exact>Home</router-link>
         </li>
         <li class="nav-item">
-          <router-link @click="closeWindow()" :to="{ name: 'about' }" class="nav-link">About</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'About' }" class="nav-link">About</router-link>
         </li>
         <li class="nav-item">
-          <router-link @click="closeWindow()" :to="{ name: 'projects' }" class="nav-link">Projects</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'Projects' }" class="nav-link">Projects</router-link>
         </li>
         <li class="nav-item">
-          <router-link @click="closeWindow()" :to="{ name: 'contact' }" class="nav-link">Contacts</router-link>
+          <router-link @click="closeWindow()" :to="{ name: 'Contact' }" class="nav-link">Contacts</router-link>
         </li>
       </ul>
     </nav>

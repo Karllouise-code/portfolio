@@ -6,11 +6,11 @@ import Contact from "./views/Contact/contact";
 import NotFound from "./views/NotFound/not_found";
 
 const routes = [
-  { path: "/", name: "home", component: Home },
-  { path: "/about", name: "about", component: About },
-  { path: "/projects", name: "projects", component: Project },
-  { path: "/contacts", name: "contact", component: Contact },
-  { path: "/:catchError(.*)", name: "not_found", component: NotFound },
+  { path: "/", name: "Home", component: Home },
+  { path: "/about", name: "About", component: About },
+  { path: "/projects", name: "Projects", component: Project },
+  { path: "/contacts", name: "Contact", component: Contact },
+  { path: "/:catchError(.*)", name: "404", component: NotFound },
 ];
 
 const router = createRouter({
@@ -21,6 +21,11 @@ const router = createRouter({
   scrollBehavior() {
     document.getElementById("app").scrollIntoView({ behavior: "smooth" });
   },
+});
+
+router.beforeEach((to, from, next) => {
+  document.title = `Here's - ${to.name}`;
+  next();
 });
 
 export default router;

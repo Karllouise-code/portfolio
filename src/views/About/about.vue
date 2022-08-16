@@ -45,6 +45,10 @@
 
 <script>
 export default {
+  // metaInfo ABout
+  metaInfo: {
+    title: "About",
+  },
   data() {
     return {
       is_loading: true,
